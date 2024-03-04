@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "d9c2a9a3-0bdf-46f0-9c2a-10728f6285a2",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33327009"
+	},
+	"item": [
+		{
+			"name": "search/listAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/api/search/list_all_products"
+			},
+			"response": []
+		},
+		{
+			"name": "search/listProductsId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/search/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"search",
+						"product",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search/listAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/api/search/list_all_orders"
+			},
+			"response": []
+		},
+		{
+			"name": "search/listOrderId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/api/search/order/1"
+			},
+			"response": []
+		},
+		{
+			"name": "search/listOrderStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/api/search/order_status/PG"
+			},
+			"response": []
+		}
+	]
+}
