@@ -10,20 +10,23 @@ use App\Models\OrderProducts;
 
 class OrderController extends Controller
 {
-    public function orderAdd(Request $request)
+    public function ProductNewOrder(Request $request)
     {
 
-        return response()->json($request->all());
-        // $list_all_products = Products::select('product_name', 'product_price', 'product_description')->get();
-        // return response()->json($list_all_products);
-        // $gravar = Depoimentos::insert(
-        // [
-        //     'id_depoimento' => $id_proximo,
-        //     'id_lang' => 1,
-        //     'depoimentos_texto' => $request -> depoimento_pt,
-        //     'depoimentos_imagem' => $arquivo_novo,
-        //     'tab_lang' => 'pt'
-        // ]);
     }
 
+    public function ProductAddOrder(Request $request)
+    {
+
+    }
+
+    public function ProductRemoveOrder(Request $request)
+    {
+
+    }
+
+    public function ProductCancelOrder(Request $request)
+    {
+
+    }
 }

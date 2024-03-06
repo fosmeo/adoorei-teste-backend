@@ -28,14 +28,12 @@ Route::get('/', function () {
 });
 
 Route::prefix('search') -> group(function(){
-    Route::get('listallproducts', [SearchController::class, 'listAllProducts']);
-    Route::get('product/{product_id}', [SearchController::class, 'listProductId']);  
+    Route::get('list_all_products', [SearchController::class, 'listAllProducts']);
+    Route::get('product/{product_id}', [SearchController::class, 'listProductId']);    Route::get('list_all_orders', [SearchController::class, 'listAllOrders']);
+    Route::get('order_status/{order_status}', [SearchController::class, 'listOrderStatus']);
+    Route::get('order/{order_id}', [SearchController::class, 'listOrderId']);
     
-    Route::get('listallorders', [SearchController::class, 'listAllOrders']);
-    Route::get('order/{order_id}', [SearchController::class, 'listOrderId']);    
-
-    Route::get('teste/{order_id}', [Test::class, 'teste']);
-
+    Route::get('teste/', [Test::class, 'teste']);
   });
 
 Route::prefix('order') -> group(function(){
