@@ -24,8 +24,8 @@ class OrderSeeder extends Seeder
         for ($i=1; $i <= 5; $i++) { 
             Order::create([
                 'user_id' => $i,
-                'order_status' => 'PG',
-                'order_total' => $i*1999.99
+                'order_status' => 'RESERVED',  // (order_status OPTIONS - RESERVED/PAID/CANCELED)
+                'order_total' => 0
             ]);
         }        
     }

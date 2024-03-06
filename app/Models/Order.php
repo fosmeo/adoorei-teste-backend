@@ -21,7 +21,7 @@ class Order extends Model
     public function orderProductRelship(){
         return $this->hasMany('App\Models\OrderProduct');
     }
-    public function userRelship(){
-        return $this->belongsTo('App\Models\User', 'user_id', 'id');
-    }
+    // public function userRelship(){
+    //     return $this->belongsTo('App\Models\User', 'user_id', 'id');
+    // }
 }

@@ -15,13 +15,54 @@ class OrderProductSeeder extends Seeder
      */
     public function run()
     {
-        // $this->orderProductSeeder();
+        $this->orderProductSeeder();
     }
 
     private function orderProductSeeder(){
-
-        // for ($i=1; $i <= 3; $i++) {
-        // OrderProduct::create(['' => $i*1999.99]);
-    }
         
+        OrderProduct::create(
+            [
+                'order_id' => 1,
+                'product_id' => 1,
+                'product_amount' => 1
+            ],
+        );
+
+                OrderProduct::create(
+            [
+                'order_id' => 1,
+                'product_id' => 2,
+                'product_amount' => 3
+            ],
+        );
+                OrderProduct::create(
+            [
+                'order_id' => 2,
+                'product_id' => 2,
+                'product_amount' => 1
+            ],
+        );
+                OrderProduct::create(
+            [
+                'order_id' => 2,
+                'product_id' => 4,
+                'product_amount' => 4
+            ],
+        );
+                OrderProduct::create(
+            [
+                'order_id' => 3,
+                'product_id' => 2,
+                'product_amount' => 1
+            ],
+        );
+                OrderProduct::create(
+            [
+                'order_id' => 4,
+                'product_id' => 2,
+                'product_amount' => 2
+            ],
+        );
+
+    }    
 }
