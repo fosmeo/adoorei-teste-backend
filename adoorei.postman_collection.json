@@ -16,30 +16,11 @@
 			"response": []
 		},
 		{
-			"name": "search/listProductsId",
+			"name": "search/listProductsID",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost/api/search/product/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"path": [
-						"api",
-						"search",
-						"product",
-						"1"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1",
-							"disabled": true
-						}
-					]
-				}
+				"url": "http://localhost/api/search/list_product_id/2"
 			},
 			"response": []
 		},
@@ -57,7 +38,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost/api/search/order/1"
+				"url": "http://localhost/api/search/list_order_id/1"
 			},
 			"response": []
 		},
@@ -66,7 +47,25 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost/api/search/order_status/PG"
+				"url": "http://localhost/api/search/list_order_status/RESERVED"
+			},
+			"response": []
+		},
+		{
+			"name": "searchOrdersUserID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/api/search/list_orders_user_id/1"
+			},
+			"response": []
+		},
+		{
+			"name": "searchOrderUserProductsID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/api/search/list_order_user_products/1/1"
 			},
 			"response": []
 		}
