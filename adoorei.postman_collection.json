@@ -61,11 +61,74 @@
 			"response": []
 		},
 		{
-			"name": "searchOrderUserProductsID",
+			"name": "new",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": "http://localhost/api/search/list_order_user_products/1/1"
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost/api/order/new_order"
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product_amount",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost/api/order/add_product_order"
+			},
+			"response": []
+		},
+		{
+			"name": "cancel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "venda_id",
+							"value": "17",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost/api/order/cancel_order"
 			},
 			"response": []
 		}

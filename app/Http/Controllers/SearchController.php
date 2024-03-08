@@ -88,25 +88,4 @@ class SearchController extends Controller
             $ind_orders++;
         }
     }
-
-    public function listOrderUserProducts($user_id, $order_id){
-
-        $user = User::select('name','email')->where(['id'=>$user_id])->get();
-        
-        $orders = Order::select('id','user_id','order_status','order_total')->where(['user_id'=>$user_id, 'id'=>$order_id])->get();
-        
-        $orderproducts = OrderProduct::select('id','order_id','product_id','product_amount')->where(['order_id'=>$order_id])->get();
-        
-        echo $user;
-        echo $orders;
-
-        $count = count($orderproducts);
-        $ind_orderproduct = 0;
-        while ($ind_orderproduct < $count) {
-            $pushamount = $orderproducts[$ind_orderproduct]['product_amount'];
-            $orderproducts[$ind_orderproduct]->productRelship['product_amount'] = $pushamount;
-            echo $orderproducts[$ind_orderproduct]->productRelship;            
-            $ind_orderproduct++;
-        }      
-      }
 }
